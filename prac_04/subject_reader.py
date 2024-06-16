@@ -13,7 +13,7 @@ def main():
 
 def load_data():
     """Loads data from a text file and returns it as a nested list"""
-    input_file = open(FILENAME)
+    input_file = open(FILENAME, "r")
     data = []
     for line in input_file:
         line = line.strip()
