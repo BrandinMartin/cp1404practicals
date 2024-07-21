@@ -6,6 +6,8 @@ from guitar import Guitar
 import csv
 
 FILENAME = 'guitars.csv'
+
+
 def main():
     guitars = read_guitars(FILENAME)
 
