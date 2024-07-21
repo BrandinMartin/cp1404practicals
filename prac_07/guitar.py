@@ -1,7 +1,5 @@
 """
-CP1404 prac_06 - Guitar program
-Estimated TTC - 1 hour
-Actual TTC - 30 minutes
+CP1404 prac_07 - Guitar program
 """
 CURRENT_YEAR = 2024
 VINTAGE_THRESHOLD = 50
@@ -11,6 +9,7 @@ class Guitar:
     """Guitar class for storing one guitar with their respective attributes"""
 
     def __init__(self, name="", year=0, cost=0):
+        """Initialise Guitar with name, year, cost"""
         self.name = name
         self.year = year
         self.cost = cost
@@ -27,3 +26,6 @@ class Guitar:
         """Decides if the guitar is vintage or not by returning True/False depending on the age"""
         return self.get_age() >= VINTAGE_THRESHOLD
 
+    def __lt__(self, other):
+        """Compares Guitars by year"""
+        return self.year < other.year
