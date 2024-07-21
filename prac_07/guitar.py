@@ -9,7 +9,7 @@ class Guitar:
     """Guitar class for storing one guitar with their respective attributes"""
 
     def __init__(self, name="", year=0, cost=0):
-        """Initialise Guitar with name, year, cost"""
+        """Initialise Guitar with name, year, cost attributes"""
         self.name = name
         self.year = year
         self.cost = cost
@@ -27,5 +27,5 @@ class Guitar:
         return self.get_age() >= VINTAGE_THRESHOLD
 
     def __lt__(self, other):
-        """Compares Guitars by year"""
+        """Compares Guitar and other by year"""
         return self.year < other.year
