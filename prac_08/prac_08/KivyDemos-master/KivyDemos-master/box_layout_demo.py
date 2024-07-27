@@ -1,6 +1,6 @@
 """
 Cp1404 prac_08
-Box layout program
+Box layout demo program
 """
 from kivy.app import App
 from kivy.lang import Builder
