@@ -7,9 +7,10 @@ from kivy.app import App
 from kivy.lang import Builder
 from kivy.properties import StringProperty
 
-FACTOR_MILES_TO_KM = 1.60934
+MILES_TO_KM = 1.60934
 
-class ConvertMilestoKm(App):
+
+class ConvertMilesToKm(App):
     output_km = StringProperty("0.0")
 
     def build(self):
@@ -29,13 +30,16 @@ class ConvertMilestoKm(App):
         self.root.ids.input_miles.text = str(miles)
 
     def update_result(self, miles):
-        self.output_km = str(miles * FACTOR_MILES_TO_KM)
+        """Updates the result"""
+        self.output_km = str(miles * MILES_TO_KM)
 
     def convert_text_to_number(self, text):
-        """Converts the text into a number """
+        """Converts the text into a number if """
         try:
             return float(text)
         except ValueError:
             return 0.0
 
-ConvertMilestoKm().run()
+
+ConvertMilesToKm().run()
+
