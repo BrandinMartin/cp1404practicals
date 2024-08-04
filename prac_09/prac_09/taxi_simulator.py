@@ -19,15 +19,18 @@ def main():
 
     while choice != "q":
         if choice == "c":
-            display_choose_taxi(taxis)
+            current_taxi = display_choose_taxi(taxis)
         elif choice == "d":
             if current_taxi:
                 current_taxi.start_fare()
-                distance = input("Drive how far? ")
-                current_taxi.drive(distance)
-                cost = current_taxi.get_fare()
-                print(f"Your {current_taxi.name} trip cost you ${cost:.2f}")
-                total += cost
+                try:
+                    distance = input("Drive how far? ")
+                    current_taxi.drive(distance)
+                    cost = current_taxi.get_fare()
+                    print(f"Your {current_taxi.name} trip cost you ${cost:.2f}")
+                    total += cost
+                except ValueError:
+                    print("Invalid taxi choice")
             else:
                 print("You need to choose a taxi before you can drive")
         else:
