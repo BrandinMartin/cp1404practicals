@@ -1,6 +1,6 @@
 """
-CP1404/CP5632 Practical
-Car class
+CP1404 prac_09
+Taxi class
 """
 from car import Car
 
